@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --color-walnut: 0.3 0.065 30;
+    --color-walnut-dark: 0.23 0.055 30;
+    --color-ivory: 0.978 0.006 80;
+    --color-beige: 0.95 0.018 80;
+    --color-gold: 0.7 0.12 65;
+    --color-gold-dark: 0.62 0.11 60;
+    --color-text: 0.19 0.045 30;
+    --color-text-muted: 0.44 0.038 35;
+    --background: var(--color-ivory);
+    --foreground: var(--color-text);
+    --card: var(--color-beige);
+    --card-foreground: var(--color-text);
+    --popover: 0.98 0.008 80;
+    --popover-foreground: var(--color-text);
+    --primary: var(--color-walnut);
+    --primary-foreground: var(--color-ivory);
+    --secondary: var(--color-beige);
+    --secondary-foreground: var(--color-text);
+    --muted: 0.92 0.012 75;
+    --muted-foreground: var(--color-text-muted);
+    --accent: var(--color-gold);
+    --accent-foreground: var(--color-text);
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.87 0.02 65;
+    --input: 0.87 0.02 65;
+    --ring: var(--color-gold);
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: var(--color-walnut-dark);
+    --sidebar-foreground: var(--color-ivory);
+    --sidebar-primary: var(--color-gold);
+    --sidebar-primary-foreground: var(--color-text);
+    --sidebar-accent: var(--color-walnut);
+    --sidebar-accent-foreground: var(--color-ivory);
+    --sidebar-border: 0.3 0.04 30;
+    --sidebar-ring: var(--color-gold);
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: "Playfair Display", serif;
+  }
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+  .btn-gold {
+    @apply rounded-full px-6 py-3 font-medium transition-all duration-200 inline-block cursor-pointer;
+    background-color: oklch(0.7 0.12 65);
+    color: oklch(0.19 0.045 30);
+    font-family: "Inter", sans-serif;
+  }
+  .btn-gold:hover {
+    background-color: oklch(0.62 0.11 60);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px oklch(0.7 0.12 65 / 0.35);
+  }
+  .btn-outline-ivory {
+    @apply rounded-full px-6 py-3 font-medium border-2 transition-all duration-200 inline-block cursor-pointer;
+    border-color: oklch(0.978 0.006 80);
+    color: oklch(0.978 0.006 80);
+    background: transparent;
+    font-family: "Inter", sans-serif;
+  }
+  .btn-outline-ivory:hover {
+    background-color: oklch(0.978 0.006 80 / 0.1);
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-semibold tracking-wide;
+    font-family: "Playfair Display", serif;
+    color: oklch(0.3 0.065 30);
+  }
+  .eyebrow {
+    @apply text-xs tracking-[0.25em] uppercase font-medium block;
+    font-family: "Inter", sans-serif;
+    color: oklch(0.7 0.12 65);
+  }
+  .shadow-luxury {
+    box-shadow: 0 8px 40px oklch(0.19 0.045 30 / 0.12);
+  }
+}
